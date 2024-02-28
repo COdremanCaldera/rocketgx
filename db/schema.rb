@@ -29,4 +29,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_213155) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "videogames", force: :cascade do |t|
+    t.string "title"
+    t.float "rating"
+    t.string "condition"
+    t.float "price"
+    t.bigint "users_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_videogames_on_users_id"
+  end
+
+  add_foreign_key "videogames", "users", column: "users_id"
 end
