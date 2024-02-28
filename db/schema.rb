@@ -14,6 +14,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_213155) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "purchases", force: :cascade do |t|
+    t.float "price"
+    t.bigint "users_id", null: false
+    t.bigint "videogames_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_purchases_on_users_id"
+    t.index ["videogames_id"], name: "index_purchases_on_videogames_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,5 +50,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_213155) do
     t.index ["users_id"], name: "index_videogames_on_users_id"
   end
 
+  add_foreign_key "purchases", "users", column: "users_id"
+  add_foreign_key "purchases", "videogames", column: "videogames_id"
   add_foreign_key "videogames", "users", column: "users_id"
 end
