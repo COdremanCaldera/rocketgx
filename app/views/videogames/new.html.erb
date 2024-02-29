@@ -1,3 +1,13 @@
-<h2>new video game</h2>
 
-
+<div class="container d-flex flex-column align-items-center w-50">
+  <h1 class="title my-3">New Videogame</h1>
+  <div class="w-75">
+    <%= simple_form_for @videogame do |f| %>
+      <%= f.input :title, label: "Título del juego" %>
+      <%= f.input :rating, label: "Califica el juego de (0-5) siendo 5 excelente", as: :numeric %>
+      <%= f.input :condition, label: "Condicion del juego", collection: ['Deficiente', 'Regular', 'Bueno', 'Impecable']%>
+      <%= f.input :price, label: "Precio", as: :numeric%>
+      <%= f.button :submit, class: 'btn-success' %>
+    <% end %>
+  </div>
+</div>
