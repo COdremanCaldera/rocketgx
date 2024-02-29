@@ -80,8 +80,7 @@ a {
 			}
 			a {
 				font-weight: 500;
-				color: $white!important;
-				opacity: .5;
+				color: $white;
 				transition: .3s all ease;
 				position: relative;
 				&:before {
@@ -180,13 +179,13 @@ a {
 
 			}
 			@media (min-width: $lg) {
-				left: 0px;
+				left: 55px;
 				top: -80px;
 				position: absolute;
 				right: 50px;
 			}
 			@media (min-width: $xl) {
-				left: 0px;
+				left: 55px;
 				top: -80px;
 
 				right: -100px;
@@ -890,4 +889,18 @@ textarea {
 		border-radius: 50%;
 		background:rgba($primary, .2);
 	}
+}
+
+.img-fluid{
+  transition: all 0.4s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.1);
+}
+
+.dropdown-menu {
+  a {
+    color:#440a8f!important;
+  }
 }
