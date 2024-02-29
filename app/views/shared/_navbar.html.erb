@@ -14,15 +14,32 @@
 							<a class="nav-link" href="index.html">Home</a>
 						</li>
 						<li><a class="nav-link" href="about.html">Video games</a></li>
-            <li><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
-            <li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
+            <li><a class="nav-link" href=""><%= image_tag "cart.svg" %></a></li>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
-					</ul>
-				</div>
-			</div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <% if user_signed_in? %>
+              <li class="nav-item dropdown">
+                <%= image_tag "user.svg", class: "nav-link", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Action", "#", class: "dropdown-item" %>
+                  <%= link_to "Another action", "#", class: "dropdown-item" %>
+                  <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+                </div>
+              </li>
+            <% else %>
+              <!--li class="nav-item"-->
+                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+              <!--/li-->
+            <% end %>
+          </ul>
+        </div>
+
+	</div>
+</div>
 
 		</nav>
 		<!-- End Header/Navigation -->
