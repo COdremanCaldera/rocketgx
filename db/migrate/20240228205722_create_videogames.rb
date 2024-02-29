@@ -5,7 +5,7 @@ class CreateVideogames < ActiveRecord::Migration[7.1]
       t.float :rating
       t.string :condition
       t.float :price
-      t.references :users, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
