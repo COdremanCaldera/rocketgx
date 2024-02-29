@@ -1,0 +1,23 @@
+.card{
+  border-radius: 50px;
+  width: 50%;
+  .bis_skin_checked{
+    text-decoration: none;
+  }
+  input, textarea{
+    border: 1px solid black;
+  }
+}
+
+#btn_login, #btn_signup{
+  background-color: #f9bf29;
+  color: #440a8f;
+  border: none;
+  text-align: center;
+}
+
+#btn_login:hover, #btn_signup:hover{
+  background-color: #ffb700;
+  color: #440a8f;
+  border: none;
+}
