@@ -16,6 +16,7 @@ class VideogamesController < ApplicationController
 
   def create
     @videogame = Videogame.new(videogame_params)
+    @videogame.user_id = current_user.id
     if @videogame.save
       redirect_to videogame_path(@videogame)
     else
