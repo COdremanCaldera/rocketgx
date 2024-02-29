@@ -1,9 +1,12 @@
-<h1> Resumen </h1>
 <div class="container">
-  <%= @videogame.title %>
-  <%= @videogame.rating %>
-  <%= @videogame.condition %>
-  <%= @videogame.price %>
+  <h1> Resumen </h1>
+  <div class="container d-flex justify-content-between m-0">
+    <div class="" style="">
+      <%= @videogame.title %>
+      <%= @videogame.rating %>
+      <%= @videogame.condition %>
+      <%= @videogame.price %>
+    </div>
+      <%= render "shared/checkout" %>
+  </div>
 </div>
-
-<%= link_to "Continuar con la compra" %>
