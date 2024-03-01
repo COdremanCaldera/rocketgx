@@ -11,10 +11,10 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item active">
-							<%= link_to "Inicio", class:"nav-link" %>
+							<%= link_to "Inicio", root_path, class: "nav-link" %>
 						</li>
-						<li><a class="nav-link" href="about.html">Video games</a></li>
-            <li><a class="nav-link" href="/videogames"><%= image_tag "cart.svg" %></a></li>
+						<li><%= link_to "Video Games", videogames_path, class: "nav-link" %></li>
+            <!--<li><a class="nav-link" href="/videogames"><%= image_tag "cart.svg" %></a></li>-->
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
