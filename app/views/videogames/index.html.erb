@@ -1,13 +1,28 @@
 <div class="d-flex banner b-index align-items-center justify-content-center">
   <div class="container">
-    <div class="text-center">
+    <div class="text-center m-5">
       <h1>Todos los Juegos</h1>
+    </div>
+    <div class="container">
+      <div class="cards">
+        <% @videogames.each do |videogame| %>
+          <%= link_to videogame_path(videogame) do%>
+            <div class="game">
+              <div class="card_game d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(68,10,143,0.4)), url(<%= url_for videogame.photo %>)">
+                <div>
+                  <h2><strong><%= videogame.title %></strong></h2>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="d-flex justify-content-start">
+<!--<div class="container">
+  <div class="cards d-flex justify-content-start">
     <% @videogames.each do |videogame| %>
       <div class="card m-3">
         <%= link_to videogame_path(videogame) do%>
@@ -15,14 +30,15 @@
             <%= videogame.title %>
           </div>
           <div class="img_videogame">
-            <%= cl_image_tag videogame.photo.key if videogame.photo.key %>
+            <%= cl_image_tag videogame.photo.key, class:"card-img-top" if videogame.photo.key %>
           </div>
         <% end %>
-        <%= link_to "Delete",
-          videogame_path(videogame),
-          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-        %>
+
       </div>
     <% end %>
   </div>
-</div>
+</div>-->
+
+
+
+<%= console %>
