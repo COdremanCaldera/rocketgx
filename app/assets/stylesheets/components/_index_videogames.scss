@@ -45,14 +45,16 @@
   }
   transition: all 0.2s ease;
   background-color: #eff2f1;
+  border-radius: 15px;
+
 }
 .card_game{
   height: 200px;
   color: white;
-  border-radius: 15px;
   background-position: center;
   background-size: cover;
   font-size: xxx-large;
+  border-radius: 15px;
   h2{
     opacity: 0;
   }
