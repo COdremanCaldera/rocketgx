@@ -1,0 +1,74 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.game{
+  i {
+    color: red;
+    top: -20px
+  }
+  transition: all 0.2s ease;
+  background-color: #eff2f1;
+  border-radius: 15px;
+
+}
+.card_game{
+  height: 200px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+  font-size: xxx-large;
+  border-radius: 15px;
+  h2{
+    opacity: 0;
+  }
+  .img{
+    width: 100%;
+  }
+}
+
+.game:hover{
+  transform: scale(1.05);
+  h2{
+    opacity: 1;
+  }
+  box-shadow: 0px 0px 80px 4px rgba(68,10,143,0.36);
+  background-color: #eff2f1;
+
+}

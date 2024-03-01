@@ -1,5 +1,5 @@
 <div class="title text-center m-4"><h1><%= @videogame.title %></h1></div>
-<div class="d-flex justify-content-center" id="card_videogame">
+<div class="d-flex justify-content-center mb-4" id="card_videogame">
   <div class="card_videogame d-flex p-5 align-items-center">
     <div class="img_videogame">
       <%= cl_image_tag @videogame.photo.key if @videogame.photo.key %>
@@ -15,8 +15,14 @@
           <button type="submit" class="btn btn-success" id="btn_buy">Comprar</button>
         <% end %>
       </div>
+
+      <div>
+        <% if current_user == @videogame.user%>
+          <%= link_to videogame_path(@videogame), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <i class="fa-solid fa-trash" style="color:red"></i>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
-
-<%= console %>
