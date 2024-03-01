@@ -1,10 +1,14 @@
 <h1><%= @videogame.title %></h1>
 
-<h2>Price: $<%= @videogame.price %></h2>
-<h2>Rating: <%= @videogame.rating %></h2>
-
-<h2>Dueño: <%= @videogame.user.first_name %></h2>
-
-<%= cl_image_tag @videogame.photo.key %>
-
-<%= console %>
+<div class="card-product d-flex justify-content-center" id="card_videogame">
+  <div class="card_videogame d-flex p-5 w-50">
+    <div class="img_videogame">
+      <%= cl_image_tag @videogame.photo.key if @videogame.photo.key %>
+    </div>
+    <div class="card-product-infos p-5">
+      <h2>Price: $<%= @videogame.price %></h2>
+      <p>Rating: <%= @videogame.rating %></p>
+      <p>Dueño: <strong><%= @videogame.user.first_name %></strong></p>
+    </div>
+  </div>
+</div>
