@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :purchases, only: [:new, :create]
   end
   resources :videogames, only: [:destroy]
+  resources :purchases, only: [:destroy]
 
   get '/users/:id', to: 'users#show', as: 'user_profile'
 
