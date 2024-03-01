@@ -1,6 +1,7 @@
 class PurchasesController < ApplicationController
   def new
     @purchase = Purchase.new
+    @videogame = Videogame.find(params[:videogame_id])
   end
 
   def create

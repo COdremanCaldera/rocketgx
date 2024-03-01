@@ -1,4 +1,4 @@
-#card_videogame{
+#card_videogame {
   .card_videogame{
     border-radius: 30px;
     height: 50%;
@@ -6,17 +6,17 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
   }
 
-  .card-product {
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
+  // .card-product {
+  //   overflow: hidden;
+  //   background: white;
+  //   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 20px;
+  // }
 
   .img_videogame {
-    width: 50%;
+    width: 100%;
 
     img{
       width: 100%;
