@@ -12,10 +12,12 @@ class VideogamesController < ApplicationController
 
   def show
     @videogame = set_videogame
+    @photo = @videogame.photo
   end
 
   def create
     @videogame = Videogame.new(videogame_params)
+    @videogame.user_id = current_user.id
     if @videogame.save
       redirect_to videogame_path(@videogame)
     else
@@ -33,7 +35,7 @@ class VideogamesController < ApplicationController
   private
 
   def videogame_params
-    params.require(:videogame).permit(:title, :rating, :condition, :price)
+    params.require(:videogame).permit(:title, :rating, :condition, :price, :photo)
   end
 
   def set_videogame
