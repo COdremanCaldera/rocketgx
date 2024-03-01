@@ -20,7 +20,7 @@
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 70px;
   object-fit: cover;
 }
 
@@ -42,7 +42,14 @@
   padding: 16px;
 }
 
-.precio p {
-  font-size: 20px;
-  font-weight: bold;
+.precio {
+  text-align: end;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  i {
+  color: red;
+  text-align: end;
+  }
 }
