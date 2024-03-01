@@ -5,16 +5,21 @@
       <div class="">
         <div class="d-flex card-product justify-content-between" style="">
           <div class="d-flex align-items-center">
-            <div>image</div>
+            <div><%= cl_image_tag @videogame.photo.key if @videogame.photo.key %></div>
             <div class="card-product-infos">
               <h2><strong><%= @videogame.title %></strong></h2>
               <%= @videogame.rating %>
               <%= @videogame.condition %>
-              <p><strong>By: <%= @videogame.user.first_name %></strong></p>
+              <p><strong> By: <%= link_to @videogame.user.first_name, videogame_seller_profile_path(videogame_id: @videogame, id: @videogame.user ) %></strong></p>
             </div>
           </div>
           <div class="precio">
             <p>$<%= @videogame.price %></p>
+            <div>
+            <%= link_to videogames_path do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+            </div>
           </div>
       </div>
     </div>

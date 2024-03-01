@@ -14,6 +14,13 @@ class PurchasesController < ApplicationController
     end
   end
 
+  def destroy
+    @purchase = Purchase.find(params[:id])
+    @purchase.destroy
+
+    redirect_to @purchase, status: :see_other
+  end
+
   private
 
   def purchase_params
