@@ -7,6 +7,7 @@
       <%= f.input :rating, label: "Califica el juego de (0-5) siendo 5 excelente", as: :numeric %>
       <%= f.input :condition, label: "Condicion del juego", collection: ['Deficiente', 'Regular', 'Bueno', 'Impecable']%>
       <%= f.input :price, label: "Precio", as: :numeric%>
+      <%= f.input :photo, as: :file %>
       <%= f.button :submit, class: 'btn-success' %>
     <% end %>
   </div>

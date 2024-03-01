@@ -12,6 +12,7 @@ class VideogamesController < ApplicationController
 
   def show
     @videogame = set_videogame
+    @photo = @videogame.photo
   end
 
   def create
@@ -34,7 +35,7 @@ class VideogamesController < ApplicationController
   private
 
   def videogame_params
-    params.require(:videogame).permit(:title, :rating, :condition, :price)
+    params.require(:videogame).permit(:title, :rating, :condition, :price, :photo)
   end
 
   def set_videogame
