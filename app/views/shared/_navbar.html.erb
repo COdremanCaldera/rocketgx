@@ -2,7 +2,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="home.html">RocketGx 🚀<span>.</span></a>
+				<%= link_to "RocketGx 🚀", root_path, class: "navbar-brand"%>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Inicio</a>
+							<%= link_to "Inicio", class:"nav-link" %>
 						</li>
 						<li><a class="nav-link" href="about.html">Video games</a></li>
             <li><a class="nav-link" href="/videogames"><%= image_tag "cart.svg" %></a></li>
