@@ -1,0 +1,28 @@
+<div class="d-flex banner b-index align-items-center justify-content-center">
+  <div class="container">
+    <div class="text-center">
+      <h1>Todos los Juegos</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-start">
+    <% @videogames.each do |videogame| %>
+      <div class="card m-3">
+        <%= link_to videogame_path(videogame) do%>
+          <div class="card-category">
+            <%= videogame.title %>
+          </div>
+          <div class="img_videogame">
+            <%= cl_image_tag videogame.photo.key if videogame.photo.key %>
+          </div>
+        <% end %>
+        <%= link_to "Delete",
+          videogame_path(videogame),
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+        %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -8,7 +8,7 @@
       <div>
         <h2>Price: $<%= @videogame.price %></h2>
         <p>Rating: <%= @videogame.rating %></p>
-        <p>Dueño: <strong><%= @videogame.user.first_name %></strong></p>
+        <p>Dueño: <strong><%= link_to @videogame.user.first_name, videogame_seller_profile_path(videogame_id: @videogame, id: @videogame.user ) %></strong></p>
       </div>
       <div>
         <%= link_to new_videogame_purchase_path(@videogame) do %>
@@ -18,3 +18,5 @@
     </div>
   </div>
 </div>
+
+<%= console %>

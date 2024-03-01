@@ -22,16 +22,4 @@ else
   render :new, status: :unprocessable_entity
 end
 
-puts "creando videogame"
-
-videogame = Videogame.new(title: "Need for Speed",
-                          condition: "Excelente",
-                          rating: 5,
-                          price: 10,
-                          user_id: user.id)
-
-if videogame.save
-  puts "videogame creado"
-else
-  render :new, status: :unprocessable_entity
-end
+puts "Listo"
