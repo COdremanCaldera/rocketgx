@@ -1,5 +1,5 @@
 <div class="title text-center m-4"><h1><%= @videogame.title %></h1></div>
-<div class="d-flex justify-content-center" id="card_videogame">
+<div class="d-flex justify-content-center mb-4" id="card_videogame">
   <div class="card_videogame d-flex p-5 align-items-center">
     <div class="img_videogame">
       <%= cl_image_tag @videogame.photo.key if @videogame.photo.key %>
@@ -26,5 +26,3 @@
     </div>
   </div>
 </div>
-
-<%= console %>
