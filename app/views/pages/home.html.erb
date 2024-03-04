@@ -27,7 +27,7 @@
 								<h1>Compra tus juegos con <span class="d-block">RocketGx 🚀</span></h1>
 								<div>
                   <p class="mb-4">RocketGX es el mercado para gamers de más rápido crecimiento. Encuentra los mejores juegos, tarjetas regalo y recargas de PC, PlayStation, Xbox y Nintendo a precios bajos</p>
-                  <p><a href="" class="btn btn-secondary me-2">Comprar ahora</a><a href="#" class="btn btn-white-outline">Explorar</a></p>
+                  <p><%= link_to "Explorar", videogames_path, class: "btn btn-secondary me-2" %></p>
                 </div>
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
 						<h2 class="mb-4 section-title">Los mejores juegos.</h2>
 						<p class="mb-4">Este son los luegos más vendidos entre los usuarios. </p>
-						<p><a href="shop.html" class="btn">Explorar</a></p>
+						<p><%= link_to "Explorar", videogames_path, class: "btn btn-secondary me-2" %></p>
 					</div>
 					<!-- End Column 1 -->
 
@@ -62,7 +62,7 @@
 							<strong class="product-price">$50.00</strong>
 
 							<span class="icon-cross">
-								<%=image_tag "cross.svg", class:"img-fluid"%>
+								<%=image_tag "cross.svg" %>
 							</span>
 						</a>
 					</div>
@@ -76,7 +76,7 @@
 							<strong class="product-price">$32,62</strong>
 
 							<span class="icon-cross">
-								<%=image_tag "cross.svg", class:"img-fluid"%>
+								<%=image_tag "cross.svg" %>
 							</span>
 						</a>
 					</div>
@@ -85,12 +85,12 @@
 					<!-- Start Column 4 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 						<a class="product-item" href="cart.html">
-							<%= image_tag "https://cdn-products.eneba.com/resized-products/xAg5W0iyjWabOPfKAeaL8hGr2YAGK_BrGWbX3uDWLuE_350x200_1x-0.jpg", class:"img-fluid product-thumbnail" %>
-							<h3 class="product-title">Marvel's Spider-Man Remastered (PC)</h3>
+							<%= image_tag "https://cdn-products.eneba.com/resized-products/8iuo-OX1uBHwDUQgp9Nr7_ty6vE1AaW-LnJ9eqodbIM_350x200_1x-0.0966e915-02e3-4027-9354-a1e1384ab9dd", class:"img-fluid product-thumbnail" %>
+							<h3 class="product-title">MLB® The Show™ 24 (PC)</h3>
 							<strong class="product-price">$37,52</strong>
 
 							<span class="icon-cross">
-								<%=image_tag "cross.svg", class:"img-fluid"%>
+								<%=image_tag "cross.svg" %>
 							</span>
 						</a>
 					</div>
@@ -105,11 +105,11 @@
         <section>
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 col-xl-8 text-center">
-          <h3 class="mb-4">Testimonials</h3>
+          <h3 class="mb-4">Testimonios</h3>
           <p class="mb-4 pb-2 mb-md-5 pb-md-0">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
-            numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
-            quisquam eum porro a pariatur veniam.
+            Siempre nos aseguramos de que los precios de todos nuestros
+            productos sean los mejores del mercado, ¡para que puedas disfrutar
+            más por menos! Nos alegra haber cumplido con tus expectativas.
           </p>
         </div>
       </div>
@@ -117,15 +117,14 @@
       <div class="row text-center">
         <div class="col-md-4 mb-5 mb-md-0">
           <div class="d-flex justify-content-center mb-4">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+            <img src="https://user-images.trustpilot.com/65e5f05771f5f00011753377/73x73.png"
               class="rounded-circle shadow-1-strong" width="150" height="150" />
           </div>
-          <h5 class="mb-3">Maria Smantha</h5>
-          <h6 class="text-primary mb-3">Web Developer</h6>
+          <h5 class="mb-3">Juan Herrera</h5>
+          <h6 class="text-primary mb-3">Cliente</h6>
           <p class="px-xl-3">
-            <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
-            tenetur.
+            <i class="fas fa-quote-left pe-2"></i>Increible servicio, fue muy facil de utilizar y todos los precios son
+              mucho mejor que en steam o paginas parecidas
           </p>
           <ul class="list-unstyled d-flex justify-content-center mb-0">
             <li>
@@ -147,14 +146,14 @@
         </div>
         <div class="col-md-4 mb-5 mb-md-0">
           <div class="d-flex justify-content-center mb-4">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+            <img src="https://user-images.trustpilot.com/6203b43db71748001367853b/73x73.png"
               class="rounded-circle shadow-1-strong" width="150" height="150" />
           </div>
-          <h5 class="mb-3">Lisa Cudrow</h5>
-          <h6 class="text-primary mb-3">Graphic Designer</h6>
+          <h5 class="mb-3">Camila</h5>
+          <h6 class="text-primary mb-3">Cliente</h6>
           <p class="px-xl-3">
-            <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
-            exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
+            <i class="fas fa-quote-left pe-2"></i>Me encanta rocketgx, solo que no me gusta tener que entrar desde Internet para comprar tarjetas de regalo para por
+            ejemplo psn, actualicen la aplicación para poder comprarla desde allí :)
           </p>
           <ul class="list-unstyled d-flex justify-content-center mb-0">
             <li>
@@ -176,14 +175,13 @@
         </div>
         <div class="col-md-4 mb-0">
           <div class="d-flex justify-content-center mb-4">
-            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+            <img src="https://user-images.trustpilot.com/65e4b6c30a1b730012165059/73x73.png"
               class="rounded-circle shadow-1-strong" width="150" height="150" />
           </div>
-          <h5 class="mb-3">John Smith</h5>
+          <h5 class="mb-3">Provedor</h5>
           <h6 class="text-primary mb-3">Marketing Specialist</h6>
           <p class="px-xl-3">
-            <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
-            dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+            <i class="fas fa-quote-left pe-2"></i>Execelente!.
           </p>
           <ul class="list-unstyled d-flex justify-content-center mb-0">
             <li>
