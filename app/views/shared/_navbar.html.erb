@@ -33,7 +33,7 @@
                 <% if user_signed_in? %>
                   <li class="nav-item dropdown">
                     <% if current_user.photo_user.key %>
-                      <%= image_tag current_user.photo_user, class:"img-fluid py-3 my-3", style:"width: 150px;" %>
+                      <%= image_tag current_user.photo_user, class:"avatar mi_avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                     <% else %>
                       <%= image_tag "user.svg", class: "nav-link", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                     <% end %>

@@ -7,7 +7,7 @@
           <div class="row g-0">
             <div class="col-md-4 gradient-custom text-center text-white"
               style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-              <% if @user.photo_user %>
+              <% if @user.photo_user.key %>
                 <%= cl_image_tag @user.photo_user.key, class:"img-fluid py-3 my-3", style:"width: 150px;" %>
               <% else %>
                 <%= image_tag "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp", class:"img-fluid py-3 my-3", style:"width: 150px;"  %>
