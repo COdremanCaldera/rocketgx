@@ -17,6 +17,7 @@ user = User.new(email: "mercantil@gmail.com",
                 password: "123456",
                 first_name: "Mercantil",
                 last_name: "Banco",
+                phone: "123456789",
                 address: "Av Caracas, 12345 con calle tu corazón")
 file = URI.open("https://subastamacpanama.org/wp-content/uploads/2020/11/logo-mercantil-600x450.jpg")
 user.photo_user.attach(io: file, filename: "user1.png", content_type: "image/png")
@@ -27,10 +28,11 @@ else
 end
 
 user2 = User.new(email: "caracas@gmail.com",
-                password: "123456",
-                first_name: "Caracas",
-                last_name: "ciudad",
-                address: "Av Caracas, 12345 con calle tu corazón")
+                 password: "123456",
+                 first_name: "Caracas",
+                 last_name: "ciudad",
+                 phone: "547896547",
+                 address: "Av Caracas, 12345 con calle tu corazón")
 file = URI.open("https://uvn-brightspot.s3.amazonaws.com/assets/vixes/imj/nuestrorumbo/M/Monumentos-historicos-en-Venezuela.jpg")
 user2.photo_user.attach(io: file, filename: "user2.png", content_type: "image/png")
 if user2.save
@@ -40,10 +42,11 @@ else
 end
 
 user3 = User.new(email: "venezuela@gmail.com",
-                password: "123456",
-                first_name: "Venezuela",
-                last_name: "pais",
-                address: "Av Caracas, 12345 con calle tu corazón")
+                 password: "123456",
+                 first_name: "Venezuela",
+                 last_name: "pais",
+                 phone: "321445657",
+                 address: "Av Caracas, 12345 con calle tu corazón")
 file = URI.open("https://penntoday.upenn.edu/sites/default/files/2019-05/VenezuelanFlag.jpg")
 user3.photo_user.attach(io: file, filename: "user3.png", content_type: "image/png")
 if user3.save
