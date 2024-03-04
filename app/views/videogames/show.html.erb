@@ -4,7 +4,7 @@
     <div class="img_videogame">
       <%= cl_image_tag @videogame.photo.key if @videogame.photo.key %>
     </div>
-    <div class="card-product-infos p-5">
+    <div class="card-product-infos p-4">
       <div>
         <h2>Price: $<%= @videogame.price %></h2>
         <p>Rating: <%= @videogame.rating %></p>
@@ -18,7 +18,7 @@
         <% else %>
           <div>
             <%= link_to new_videogame_purchase_path(@videogame) do %>
-              <button type="submit" class="btn btn-success" id="btn_buy">Agregar al Carrito</button>
+              <button type="submit" class="btn btn-secondary ms-3" id="btn_buy">Agregar al Carrito</button>
             <% end %>
           </div>
         <% end %>

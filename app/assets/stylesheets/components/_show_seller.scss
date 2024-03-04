@@ -14,3 +14,13 @@
     border-radius: 50%;
   }
 }
+
+#profile_img{
+  width: 80%;
+  height: 60%;
+  transition: all 0.3s ease;
+}
+
+#profile_img:hover{
+  transform: scale(1.1) ;
+}
