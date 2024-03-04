@@ -15,7 +15,6 @@
           <button type="submit" class="btn btn-success" id="btn_buy">Comprar</button>
         <% end %>
       </div>
-
       <div>
         <% if current_user == @videogame.user%>
           <%= link_to videogame_path(@videogame), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
