@@ -3,19 +3,27 @@
     <div class="text-center m-5">
       <h1>Todos los Juegos</h1>
     </div>
+    <div id="videogames">
+
+
+    </div>
     <div class="container">
       <div class="cards">
-        <% @videogames.each do |videogame| %>
-          <%= link_to videogame_path(videogame) do%>
-            <div class="game">
-              <div class="card_game d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(68,10,143,0.4)), url(<%= url_for videogame.photo %>)">
-                <div>
-                  <h2><strong><%= videogame.title %></strong></h2>
+        <% if @videogames.any? %>
+          <% @videogames.each do |videogame| %>
+            <%= link_to videogame_path(videogame) do%>
+              <div class="game">
+                <div class="card_game d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(68,10,143,0.4)), url(<%= url_for videogame.photo %>)">
+                  <div>
+                    <h2><strong><%= videogame.title %></strong></h2>
+                  </div>
                 </div>
               </div>
-            </div>
+            <% end %>
           <% end %>
-        <% end %>
+          <% else %>
+        <em>Sorry, no found.</em>
+      <% end %>
       </div>
     </div>
   </div>

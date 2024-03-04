@@ -4,6 +4,9 @@ class VideogamesController < ApplicationController
 
   def index
     @videogames = Videogame.all
+    if params[:query].present?
+      @videogames = Videogame.search_by_title(params[:query])
+    end
   end
 
   def new
