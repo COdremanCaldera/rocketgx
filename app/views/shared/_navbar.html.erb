@@ -1,13 +1,22 @@
 		<!-- Start Header/Navigation -->
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
-			<div class="container">
-				<%= link_to "RocketGx 🚀", root_path, class: "navbar-brand"%>
+			<div class="container d-flex justify-content-between">
+				<div><%= link_to "RocketGx 🚀", root_path, class: "navbar-brand"%></div>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
+				<div>
+          <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> %>
+          <%= form_with url: videogames_path, method: :get, class: "d-flex" do %>
+            <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control",
+                  placeholder: "Busca un videojuego"
+              %>
+            <%= submit_tag "Buscar", name: "", class: "btn btn-secondary ms-3"%>
+          <% end %>
+        </div>
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item active">
@@ -15,32 +24,31 @@
 						</li>
 						<li><%= link_to "Video Games", videogames_path, class: "nav-link" %></li>
             <!--<li><a class="nav-link" href="/videogames"><%= image_tag "cart.svg" %></a></li>-->
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-            <% if user_signed_in? %>
-              <li class="nav-item dropdown">
-                <%= image_tag "user.svg", class: "nav-link", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                <div class="dropdown-menu dropdown-menu-end text-primary" aria-labelledby="navbarDropdown">
-                  <%= link_to "Perfil", user_profile_path(current_user), class: "dropdown-item" %>
-                  <%= link_to "Subir Juego", new_videogame_path, class: "dropdown-item" %>
-                  <%= link_to "Log out",destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-                </div>
-              </li>
-            <% else %>
-              <!--li class="nav-item"-->
-                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-              <!--/li-->
-            <% end %>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto">
+                <% if user_signed_in? %>
+                  <li class="nav-item dropdown">
+                    <%= image_tag "user.svg", class: "nav-link", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                    <div class="dropdown-menu dropdown-menu-end text-primary" aria-labelledby="navbarDropdown">
+                      <%= link_to "Perfil", user_profile_path(current_user), class: "dropdown-item" %>
+                      <%= link_to "Subir Juego", new_videogame_path, class: "dropdown-item" %>
+                      <%= link_to "Log out",destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+                    </div>
+                  </li>
+                <% else %>
+                  <!--li class="nav-item"-->
+                    <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+                  <!--/li-->
+                <% end %>
+              </ul>
+            </div>
           </ul>
-        </div>
-
-	</div>
-</div>
-
+	      </div>
+      </div>
 		</nav>
 		<!-- End Header/Navigation -->
 <%# <a class="nav-link" href="#"><img src="images/user.svg"></a> %>
