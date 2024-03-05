@@ -6,8 +6,8 @@
     </div>
     <div class="card-product-infos p-4">
       <div class="ms-3">
-        <h2>Price: $<%= @videogame.price %></h2>
-        <p>Rating: <%= @videogame.rating %></p>
+        <h2>Precio: $<%= @videogame.price %></h2>
+        <p>Calificación: <%= @videogame.rating %></p>
         <p>Dueño: <strong><%= link_to @videogame.user.first_name, videogame_seller_profile_path(videogame_id: @videogame, id: @videogame.user ) %></strong></p>
       </div>
       <div>
@@ -25,12 +25,12 @@
         <% else %>
           <div>
             <%= link_to new_videogame_purchase_path(@videogame) do %>
-              <button type="submit" class="btn btn-secondary ms-3" id="btn_buy">Agregar al Carrito</button>
+              <button type="submit" class="btn btn-secondary ms-3" id="btn_buy">Agregar al carrito</button>
             <% end %>
           </div>
         <% end %>
         <%= link_to videogames_path do %>
-          <button type="submit" class="btn btn-success ms-3 mt-2" id="btn_back">Back to Games</button>
+          <button type="submit" class="btn btn-success ms-3 mt-2" id="btn_back">Volver a juegos</button>
         <% end %>
       </div>
     </div>

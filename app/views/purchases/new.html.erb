@@ -10,7 +10,7 @@
               <h2><strong><%= @videogame.title %></strong></h2>
               <%= @videogame.rating %>
               <%= @videogame.condition %>
-              <p><strong> By: <%= link_to @videogame.user.first_name, videogame_seller_profile_path(videogame_id: @videogame, id: @videogame.user ) %></strong></p>
+              <p><strong> Dueño: <%= link_to @videogame.user.first_name, videogame_seller_profile_path(videogame_id: @videogame, id: @videogame.user ) %></strong></p>
             </div>
           </div>
           <div class="precio">
