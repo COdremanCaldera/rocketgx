@@ -28,6 +28,23 @@ class VideogamesController < ApplicationController
     end
   end
 
+  def edit
+    if current_user.id == set_videogame.user.id
+      @videogame = set_videogame
+    else
+      redirect_to videogames_path
+    end
+  end
+
+  def update
+    @videogame = Videogame.new(videogame_params)
+    if @videogame.save
+      redirect_to videogame_path(@videogame)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @videogame = Videogame.find(params[:id])
     @videogame.destroy

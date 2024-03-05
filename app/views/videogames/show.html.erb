@@ -12,9 +12,16 @@
       </div>
       <div>
         <% if current_user == @videogame.user%>
-          <%= link_to videogame_path(@videogame), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
-            Eliminar <i class="fa-solid fa-trash" style="color:red"></i>
-          <% end %>
+          <div>
+            <%= link_to edit_videogame_path(@videogame) do %>
+              Editar <i class="fa-solid fa-pen" style="color:red"></i>
+            <% end %>
+          </div>
+          <div class="mb-2">
+            <%= link_to videogame_path(@videogame), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+              Eliminar <i class="fa-solid fa-trash" style="color:red"></i>
+            <% end %>
+          </div>
         <% else %>
           <div>
             <%= link_to new_videogame_purchase_path(@videogame) do %>
@@ -22,7 +29,11 @@
             <% end %>
           </div>
         <% end %>
+        <%= link_to videogames_path do %>
+          <button type="submit" class="btn btn-success ms-3 mt-2" id="btn_back">Back to Games</button>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
+<%= console %>
