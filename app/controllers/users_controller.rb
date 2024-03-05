@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show_seller
-    @videogame = Videogame.find(params[:videogame_id])
+    @videogame = set_params
     @user = @videogame.user
     @markers = [
       {
@@ -18,5 +18,11 @@ class UsersController < ApplicationController
         lng: @user.longitude
       }
     ]
+  end
+
+  private
+
+  def set_params
+    Videogame.find(params[:videogame_id])
   end
 end
