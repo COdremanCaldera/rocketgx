@@ -1,8 +1,8 @@
 <div class="p-5 text-center"><h3><strong>PERFIL DE USUARIO</strong></h3></div>
 <section class="vh-100" >
   <div class="container  h-100">
-    <div class="row d-flex justify-content-center align-items-center" id="show_profile">
-      <div class="col col-lg-6 mb-4 mb-lg-0" id="profile">
+    <div class="row d-flex justify-content-center align-items-center ">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
         <div class="card mb-3 w-100" style="border-radius: .5rem;">
           <div class="row g-0">
             <div class="col-md-4 gradient-custom text-center text-white"
@@ -26,7 +26,7 @@
                   </div>
                   <div class="col-6 mb-3">
                     <h6>Telefono</h6>
-                    <p class="text-muted"><%= @user.phone %></p>
+                    <p class="text-muted">0412.398.68.45</p>
                   </div>
                 </div>
                 <h6><strong>Datos de cuenta</strong></h6>
@@ -35,7 +35,18 @@
                   <div class="col-6 mb-3">
                     <h6>Dirección</h6>
                     <h6><%= @user.address %></h6>
-                  </div>
+                    </div>
+
+                  <%# MAPA DE DIRECCION %>
+
+                    <% @markers.to_json %>
+                    <div style="width: 100%; height:220px;"
+                      data-controller="map"
+                      data-map-markers-value="<%= @markers.to_json %>"
+                      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+                  <%#  END MAPA DE DIRECCION %>
+
                 </div>
               </div>
             </div>
