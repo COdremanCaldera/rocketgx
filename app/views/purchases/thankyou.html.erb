@@ -1,20 +1,6 @@
 		<div class="hero2">
 				<div class="container">
-					<div class="row justify-content-between">
-						<div class="col-lg-8">
-							<div class="intro-excerpt">
-								<h1>¡Gracias por tu compra!</h1>
-								<div>
-                  <p><%= link_to "Volver a todos los juegos", videogames_path, class: "btn btn-secondary me-2" %></p>
-                </div>
-							</div>
-						</div>
-						<div class="col-lg-4" id="hero2">
-							<div class="hero-img-wrap">
-                <%= image_tag "https://th.bing.com/th/id/R.65e4e2338247a8e2874e8cdb3161370e?rik=AFTWIJnH16HJ6Q&riu=http%3a%2f%2fvgboxart.com%2fresources%2frender%2f13755_overwatch-prev.png&ehk=2vgXd9Dg4CbWFzf%2b2DtUKWCKWN3CEL60mafYkw6Px9w%3d&risl=&pid=ImgRaw&r=0", class:"img-fluid"%>
-							</div>
-						</div>
-					</div>
+          <%= render "shared/thankyou" %>
 				</div>
 			</div>
 
