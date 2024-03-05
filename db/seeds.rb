@@ -20,7 +20,7 @@ user = User.new(email: "mercantil@gmail.com",
                 phone: "123456789",
                 address: "Av Caracas, Caracas")
 file = URI.open("https://subastamacpanama.org/wp-content/uploads/2020/11/logo-mercantil-600x450.jpg")
-user.photo_user.attach(io: file, filename: "user1.png", content_type: "image/png")
+user.photo.attach(io: file, filename: "user1.png", content_type: "image/png")
 if user.save
   puts "usuario 1 creado"
 else
@@ -34,7 +34,7 @@ user2 = User.new(email: "caracas@gmail.com",
                  phone: "547896547",
                  address: "Av Bolivar, Caracas")
 file = URI.open("https://uvn-brightspot.s3.amazonaws.com/assets/vixes/imj/nuestrorumbo/M/Monumentos-historicos-en-Venezuela.jpg")
-user2.photo_user.attach(io: file, filename: "user2.png", content_type: "image/png")
+user2.photo.attach(io: file, filename: "user2.png", content_type: "image/png")
 if user2.save
   puts "usuario 2 creado"
 else
@@ -48,7 +48,7 @@ user3 = User.new(email: "venezuela@gmail.com",
                  phone: "321445657",
                  address: "Los Teques, Miranda")
 file = URI.open("https://penntoday.upenn.edu/sites/default/files/2019-05/VenezuelanFlag.jpg")
-user3.photo_user.attach(io: file, filename: "user3.png", content_type: "image/png")
+user3.photo.attach(io: file, filename: "user3.png", content_type: "image/png")
 if user3.save
   puts "usuario 3 creado"
 else
