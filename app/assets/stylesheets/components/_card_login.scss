@@ -9,7 +9,7 @@
   }
 }
 
-#btn_login, #btn_signup, #btn_buy{
+#btn_login, #btn_signup, #btn_buy, #btn_back{
   background-color: #f9bf29;
   color: #440a8f;
   border: none;
@@ -20,5 +20,19 @@
 #btn_login:hover, #btn_signup:hover, #btn_buy:hover{
   background-color: #ffb700;
   color: #440a8f;
+  border: none;
+}
+
+#btn_back{
+  background-color: #440a8f;
+  color: #f9bf29;
+  border: none;
+  text-align: center;
+  width: 100%;
+}
+
+#btn_back:hover{
+  background-color: #360872;
+  color: #f9bf29;
   border: none;
 }
