@@ -4,19 +4,20 @@
 			<div class="container d-flex justify-content-between">
 				<div><%= link_to "RocketGx 🚀", root_path, class: "navbar-brand"%></div>
 
-				<div>
-          <%# <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button> %>
-          <%= form_with url: videogames_path, method: :get, class: "d-flex" do %>
-            <%= text_field_tag :query,
-                  params[:query],
-                  class: "form-control",
-                  placeholder: "Busca un videojuego"
-              %>
-            <%= submit_tag "Buscar", name: "", class: "btn btn-secondary ms-3"%>
-          <% end %>
-        </div>
+          <div class="search__container container w-25 d-flex align-items-center">
+                <%= form_with url: videogames_path, method: :get, class: "d-flex" do %>
+                            <div>
+                              <%= text_field_tag :query,
+                                    params[:query],
+                                    class: "search__input",
+                                    placeholder: "Busca un videojuego"
+                                %>
+                            </div>
+                              <div class= "ms-2 d-flex align-items-center"><span><i class="fa-solid fa-magnifying-glass"></i></span></div>
+                            <%#= submit_tag "Buscar", name: "", class: "btn btn-secondary ms-3"%>
+                          <% end %>
+          </div>
+
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item active">
