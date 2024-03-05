@@ -38,7 +38,7 @@
                   input_html: { autocomplete: "current-password" } %>
       <div class="d-flex align-items-center justify-content-between">
         <%= f.input :photo, as: :file %>
-        <%= image_tag @user.photo_user, size: "60x60" if @user.photo_user.attached? %>
+        <%= image_tag @user.photo, size: "60x60" if @user.photo.attached? %>
       </div>
     </div>
 
