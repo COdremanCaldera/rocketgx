@@ -4,11 +4,19 @@ class PurchasesController < ApplicationController
     @videogame = Videogame.find(params[:videogame_id])
   end
 
+  def show
+    @purchase = set_purchase
+    @photo = @videogame.photo
+  end
+
+  def thankyou
+  end
+
   def create
     @purchase = Purchase.new(purchase_params)
     @purchase.user_id = current_user.id
     if @purchase.save
-      redirect_to @purchase
+      redirect_to videogame_purchase_path(@purchase)
     else
       render :new, status: :unprocessable_entity
     end
@@ -25,5 +33,9 @@ class PurchasesController < ApplicationController
 
   def purchase_params
     params.require(:purchase).permit(:price, :videogame_id)
+  end
+
+  def set_purchase
+    @purchase = Purchase.find(params[:id])
   end
 end
