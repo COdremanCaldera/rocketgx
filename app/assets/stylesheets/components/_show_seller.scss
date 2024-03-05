@@ -9,8 +9,16 @@
   background: linear-gradient(to right bottom, rgb(142, 127, 177), rgb(44, 6, 80));
   }
 #profile{
-  width: 70%;
-  img{
-    border-radius: 50%;
-  }
+  width: 80%;
+}
+
+#profile_img{
+  width: 80%;
+  height: 46% !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+#profile_img:hover{
+  transform: scale(1.1) ;
 }
