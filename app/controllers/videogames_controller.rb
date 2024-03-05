@@ -37,8 +37,8 @@ class VideogamesController < ApplicationController
   end
 
   def update
-    @videogame = Videogame.new(videogame_params)
-    if @videogame.save
+    @videogame = set_videogame
+    if @videogame.update(videogame_params)
       redirect_to videogame_path(@videogame)
     else
       render :new, status: :unprocessable_entity

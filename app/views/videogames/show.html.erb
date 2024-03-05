@@ -5,7 +5,7 @@
       <%= cl_image_tag @videogame.photo.key if @videogame.photo.key %>
     </div>
     <div class="card-product-infos p-4">
-      <div>
+      <div class="ms-3">
         <h2>Price: $<%= @videogame.price %></h2>
         <p>Rating: <%= @videogame.rating %></p>
         <p>Dueño: <strong><%= link_to @videogame.user.first_name, videogame_seller_profile_path(videogame_id: @videogame, id: @videogame.user ) %></strong></p>
@@ -36,4 +36,3 @@
     </div>
   </div>
 </div>
-<%= console %>
